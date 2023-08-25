@@ -12,9 +12,9 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
 
-        <!-- версия Aspectj -->
+        
         <aspectj.version>1.9.7</aspectj.version>
-        <!-- версия Allure -->
+        
         <allure.version>2.21.0</allure.version>
     </properties>
 
@@ -38,7 +38,7 @@
                     </properties>
                     <systemProperties>
                         <property>
-                            <!-- папка, в которую будут генерироваться отчёты Allure -->
+                            
                             <name>allure.results.directory</name>
                             <value>${project.build.directory}/allure-results</value>
                         </property>
@@ -52,7 +52,7 @@
                     </dependency>
                 </dependencies>
             </plugin>
-            <!-- подключение плагина allure-maven для вызова функций Allure с помощью Maven -->
+            
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
@@ -89,7 +89,7 @@
             <version>2.10.1</version>
         </dependency>
 
-        <!-- модуль взаимодействия Allure и Junit -->
+        
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-junit4</artifactId>
@@ -97,7 +97,7 @@
         </dependency>
 
         <dependency>
-            <!-- модуль взаимодействия Allure и RestAssured -->
+            
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-rest-assured</artifactId>
             <version>${allure.version}</version>
@@ -113,7 +113,7 @@
             <version>1.13.1</version>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
@@ -122,7 +122,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>3.14.0</version> <!-- Ваша нужная версия -->
+            <version>3.14.0</version> 
         </dependency>
 
     </dependencies>
