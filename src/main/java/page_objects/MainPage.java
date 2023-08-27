@@ -5,6 +5,9 @@ import extensions.WebDriverFactory;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 public class MainPage {
     By buttonLogin = By.xpath("//*[.='Войти в аккаунт']");
     By buttonMakeOrder = By.xpath("//*[.='Оформить заказ']");
@@ -53,6 +56,8 @@ public class MainPage {
 
     @Step("Выбираю раздел Булки")
     public MainPage chooseBunsTab() {
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(bunsTab)).click();
         driver.findElement(bunsTab).click();
         return this;
     }
@@ -63,9 +68,9 @@ public class MainPage {
         return this;
     }
 
-    @Step("Выбираю раздел Начинки")
+   @Step("Выбираю раздел Начинки")
     public MainPage chooseFillingsTab() {
-        driver.findElement(fillingsTab).click();
+       driver.findElement(fillingsTab).click();
         return this;
     }
 

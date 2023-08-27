@@ -54,13 +54,13 @@ public class RegistrationPageTest extends ExtendsTest {
     public void tearDown(){
         userClient = new UserClient();
         UserCredentials userCredentials = new UserCredentials(email, password);
-        Response response = userClient.login(userCredentials);
+        Response response = UserClient.login(userCredentials);
         if (response.body().jsonPath().getString("accessToken") != null) {
             userClient.delete(response);
         }
 
         UserCredentials userNoValidCredentials = new UserCredentials(email, incorrectPassword);
-        Response noValidResponse = userClient.login(userNoValidCredentials);
+        Response noValidResponse = UserClient.login(userNoValidCredentials);
         if (noValidResponse.body().jsonPath().getString("accessToken") != null) {
             userClient.delete(noValidResponse);
         }

@@ -1,0 +1,26 @@
+-------------------------------------------------------------------------------
+Test set: LoginPageTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 21.351 s <<< FAILURE! - in LoginPageTest
+loginWithForgotPagePositiveTest(LoginPageTest)  Time elapsed: 5.248 s  <<< ERROR!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <a class="Auth_link__1fOlj" href="/login">...</a> is not clickable at point (686, 575). Other element would receive the click: <div class="Modal_modal_overlay__x2ZCr"></div>
+  (Session info: chrome=116.0.5845.110)
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'macbook-pro', ip: 'fe80:0:0:0:cc3:3591:4ae6:8f80%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.4.1', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.110, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/6x/4cg0t2dj35n...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54559}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4a202648e518784995a9d2660ed7e8f3
+	at LoginPageTest.loginWithForgotPagePositiveTest(LoginPageTest.java:70)
+
+loginWithMainPageButtonPersonAccountPositiveTest(LoginPageTest)  Time elapsed: 6.317 s  <<< ERROR!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <a class="AppHeader_header__link__3D_hX" href="/account">...</a> is not clickable at point (1096, 44). Other element would receive the click: <div class="Modal_modal_overlay__x2ZCr"></div>
+  (Session info: chrome=116.0.5845.110)
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'macbook-pro', ip: 'fe80:0:0:0:cc3:3591:4ae6:8f80%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.4.1', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.110, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/6x/4cg0t2dj35n...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54595}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 04d9b74b6d49a95aceee7c13570b3635
+	at LoginPageTest.loginWithMainPageButtonPersonAccountPositiveTest(LoginPageTest.java:46)
+

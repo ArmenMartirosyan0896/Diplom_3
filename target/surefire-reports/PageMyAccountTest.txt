@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: PageMyAccountTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 30.752 s <<< FAILURE! - in PageMyAccountTest
+openLoginPagePressButtonExitPositiveTest(PageMyAccountTest)  Time elapsed: 10.821 s  <<< ERROR!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <button class="button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_large__G21Vg">...</button> is not clickable at point (1088, 440). Other element would receive the click: <div class="Modal_modal_overlay__x2ZCr"></div>
+  (Session info: chrome=116.0.5845.110)
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'macbook-pro', ip: 'fe80:0:0:0:cc3:3591:4ae6:8f80%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.4.1', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.110, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: /var/folders/6x/4cg0t2dj35n...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54391}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8368a1e58e8dff08dc43cf124263200f
+	at PageMyAccountTest.setupAccount(PageMyAccountTest.java:25)
+

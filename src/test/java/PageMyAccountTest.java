@@ -66,7 +66,7 @@ public class PageMyAccountTest extends ExtendsTest {
     public void tearDown(){
         userClient = new UserClient();
         UserCredentials userCredentials = new UserCredentials(user.getEmail(), user.getPassword());
-        Response response = userClient.login(userCredentials);
+        Response response = UserClient.login(userCredentials);
         if (response.body().jsonPath().getString("accessToken") != null) {
             userClient.delete(response);
         }
