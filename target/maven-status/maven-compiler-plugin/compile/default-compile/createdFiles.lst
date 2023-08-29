@@ -1,0 +1,11 @@
+extensions/WebDriverFactory.class
+page_objects/IncorrectPassword.class
+api/RestClient.class
+page_objects/MainPage.class
+page_objects/PageMyAccount.class
+page_objects/LoginPage.class
+config/AppConfig.class
+api/UserClient.class
+api/UserCredentials.class
+api/User.class
+page_objects/RegistrationPage.class
