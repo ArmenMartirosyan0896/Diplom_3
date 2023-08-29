@@ -56,21 +56,25 @@ public class MainPage {
 
     @Step("Выбираю раздел Булки")
     public MainPage chooseBunsTab() {
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(bunsTab)).click();
         driver.findElement(bunsTab).click();
+       WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.textToBePresentInElementLocated(activeTab, "Булки"));
         return this;
     }
 
     @Step("Выбираю раздел Coусы")
     public MainPage chooseSaucesTab() {
         driver.findElement(saucesTab).click();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.textToBePresentInElementLocated(activeTab, "Соусы"));
         return this;
     }
 
    @Step("Выбираю раздел Начинки")
     public MainPage chooseFillingsTab() {
-       driver.findElement(fillingsTab).click();
+        driver.findElement(fillingsTab).click();
+       WebDriverWait wait = new WebDriverWait(driver, 10);
+       wait.until(ExpectedConditions.textToBePresentInElementLocated(activeTab, "Начинки"));
         return this;
     }
 

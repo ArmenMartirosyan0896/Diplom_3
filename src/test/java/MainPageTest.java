@@ -1,9 +1,9 @@
 import base.ExtendsTest;
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
 import static org.junit.Assert.assertTrue;
 
 
@@ -24,7 +24,8 @@ public class MainPageTest extends ExtendsTest {
         String expectedSection = "Булки";
         mainPage.chooseBunsTab();
         String activeSection = mainPage.getActiveSection();
-        assertTrue("Раздел 'Булки' не активен", activeSection.equals(expectedSection));
+        Assert.assertEquals("Раздел 'Булки' не активен", expectedSection, activeSection);
+        assertTrue("Метод chooseBunsTab() вернул некорректное значение", mainPage.checkActiveSectionIs(expectedSection));
     }
 
 
@@ -35,7 +36,8 @@ public class MainPageTest extends ExtendsTest {
         String expectedSection = "Начинки";
         mainPage.chooseFillingsTab();
         String activeSection = mainPage.getActiveSection();
-        assertTrue("Раздел 'Начинки' не активен", activeSection.equals(expectedSection));
+        Assert.assertEquals("Раздел 'Начинки' не активен", expectedSection, activeSection);
+        assertTrue("Метод chooseFillingsTab() вернул некорректное значение", mainPage.checkActiveSectionIs(expectedSection));
     }
 
     @Test
@@ -45,6 +47,7 @@ public class MainPageTest extends ExtendsTest {
         String expectedSection = "Соусы";
         mainPage.chooseSaucesTab();
         String activeSection = mainPage.getActiveSection();
-        assertTrue("Раздел 'Соусы' не активен", activeSection.equals(expectedSection));
+        Assert.assertEquals("Раздел 'Соусы' не активен", expectedSection, activeSection);
+        assertTrue("Метод chooseSaucesTab() вернул некорректное значение", mainPage.checkActiveSectionIs(expectedSection));
     }
 }
